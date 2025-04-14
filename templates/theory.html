@@ -2,60 +2,46 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Теория по биологии</title>
-    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+    <title>Теория биологии</title>
+    {% load static %}
+    <link href="{% static 'bootstrap.min.css' %}" rel="stylesheet">
 </head>
 <body>
     <div class="container mt-5">
-        <h1 class="mb-4">Краткая теория по биологии</h1>
-        <a href="{% url 'index' %}" class="btn btn-secondary mb-3">На главную</a>
-        
-        <h3>Основные темы:</h3>
-        <div class="accordion" id="biologyTheory">
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-                        Клетка — основа жизни
-                    </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#biologyTheory">
-                    <div class="accordion-body">
-                        <strong>Клетка</strong> — элементарная единица жизни. Состоит из ядра, цитоплазмы, мембраны. Различают прокариоты (без ядра) и эукариоты (с ядром).
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-                        Генетика и ДНК
-                    </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#biologyTheory">
-                    <div class="accordion-body">
-                        <strong>ДНК (дезоксирибонуклеиновая кислота)</strong> — молекула, хранящая генетическую информацию. Состоит из двух спирально закрученных цепей. Гены определяют признаки организма.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
-                        Эволюция и естественный отбор
-                    </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#biologyTheory">
-                    <div class="accordion-body">
-                        <strong>Эволюция</strong> — процесс изменения видов. <strong>Естественный отбор</strong> — выживают особи с наиболее полезными признаками, передавая их потомству.
-                    </div>
-                </div>
-            </div>
+        <h1 class="text-center mb-4">Основы биологии</h1>
+        <div class="card p-4 shadow-sm">
+            <h2>Что такое биология?</h2>
+            <p>Биология — наука о жизни и живых организмах. Она изучает строение, функционирование, развитие и взаимодействие живых существ.</p>
+            
+            <h3>Клетка — основа жизни</h3>
+            <ul>
+                <li>Все живые организмы состоят из <b>клеток</b>.</li>
+                <li>Клетка — минимальная единица жизни, способная расти, делиться и реагировать на среду.</li>
+                <li>Основные части клетки: ядро, цитоплазма, мембрана.</li>
+            </ul>
+
+            <h3>Уровни организации жизни</h3>
+            <ol>
+                <li><b>Молекулярный</b> (ДНК, белки, углеводы)</li>
+                <li><b>Клеточный</b> (одноклеточные, многоклеточные)</li>
+                <li><b>Тканевый</b> (мышцы, эпителий, нервная ткань)</li>
+                <li><b>Органный</b> (сердце, печень, мозг)</li>
+                <li><b>Организменный</b> (растение, животное, человек)</li>
+                <li><b>Популяционный</b> (виды в природе)</li>
+                <li><b>Экосистемный</b> (лес, озеро, океан)</li>
+            </ol>
+
+            <h3>Главные биологические процессы</h3>
+            <ul>
+                <li><b>Фотосинтез</b> — превращение солнечной энергии в химическую (растения).</li>
+                <li><b>Дыхание</b> — выделение энергии из органических веществ (все организмы).</li>
+                <li><b>Размножение</b> — продолжение жизни (деление, семена, потомство).</li>
+                <li><b>Наследственность и изменчивость</b> — передача генов и их мутации.</li>
+            </ul>
         </div>
-        
-        <div class="mt-4">
-            <a href="{% url 'start_test' %}" class="btn btn-primary">Теперь пройти тест</a>
+        <div class="text-center mt-4">
+            <a href="{% url 'home' %}" class="btn btn-secondary">На главную</a>
         </div>
     </div>
-
-    <script src="{% static 'bootstrap.bundle.min.js' %}"></script>
 </body>
 </html>

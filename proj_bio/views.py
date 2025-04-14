@@ -63,11 +63,11 @@ def index(request):
 
 
 
-"""
+
 def theory(request):
-    pass
     return render(request, 'theory.html')
 
+"""
 def start_test(request):
     pass
     request.session.flush()  # Очищение
