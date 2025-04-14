@@ -18,9 +18,13 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.index),
-#    path('quiz', views.terms_list),
-#    path('add-term', views.add_term),
+    path('', views.index), #гл стр
+#    path('theory', views.theory), # стр с теор
+#    path('start-test', views.start_test), #обнуление теста
+#    path('test_page', views.test_page), #стр теста
+#    path('submit-answer', views.submit_answer), #обработка ответа
+#    path('result', views.result) #стр с результатом
+    
 #    path('send-term', views.send_term),
 #    path('stats', views.show_stats)
 ]
