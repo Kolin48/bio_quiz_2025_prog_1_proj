@@ -17,7 +17,7 @@ from dotenv import load_dotenv
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 dotenv_path = os.path.join(BASE_DIR, ".env")
-load_dotenv() 
+load_dotenv()
 
 
 # Quick-start development settings - unsuitable for production
@@ -27,7 +27,9 @@ load_dotenv()
 SECRET_KEY = str(os.getenv("SECRET_KEY"))
 
 # SECURITY WARNING: don't run with debug turned on in production!
+
 DEBUG = bool(os.getenv("DEBUG"))
+#DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
